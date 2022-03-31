@@ -1,0 +1,48 @@
+
+
+#pagina {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 420px){
+	#pagina {
+		background: rgb(107, 105, 105);
+	}
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px){
+	
+	#pagina {
+		background: rgb(175, 113, 21);
+	}
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px){
+	
+	#pagina {
+		background: rgb(230, 26, 152);
+	}
+}
+@media screen and (max-width: 1079px) and (min-width: 1366px){
+	
+	#pagina {
+		background: rgb(185, 115, 212);
+	}
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1080px){
+	
+	#pagina {
+		background: rgb(238, 169, 112);
+	}
+}
+
+@media screen and (max-width: 2000px) and (min-width: 1920px){
+	
+	#pagina {
+		background: rgb(218, 221, 16);
+	}
+}
