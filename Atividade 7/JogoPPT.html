@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo</title>
+
+    <script>
+        var escolhaPC;
+        var resultado;
+        var pedra = 1;
+        var tesoura = 2;
+        var papel = 3;
+
+        function geraNumero(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        escolhaPC = geraNumero(1, 3);
+        var escolhaUsuario;
+
+
+        escolhaUsuario = prompt("Escolha uma opção: " + "\n" +
+            "1 - pedra" + "\n" +
+            "2 - tesoura" + "\n" +
+            "3 - papel" + "\n" +
+            "0 - cancelar");
+        parseInt(escolhaUsuario);
+
+        if (![0, 1, 2, 3].includes(escolhaUsuario)) {
+            alert("Valor inválido.")
+        }
+        else {
+            while (escolhaUsuario > 0) {
+
+                if (escolhaUsuario == escolhaPC) {
+                    alert("Deu empate!");
+                }
+
+                else if (escolhaUsuario == pedra && escolhaPC == tesoura) {
+                    alert("Você ganhou!");
+                }
+
+                else if (escolhaUsuario == pedra && escolhaPC == papel) {
+                    alert("O computador ganhou.");
+                }
+
+                else if (escolhaUsuario == tesoura && escolhaPC == papel) {
+                    alert("Você ganhou!");
+                }
+
+                else if (escolhaUsuario == tesoura && escolhaPC == pedra) {
+                    alert("O computador ganhou.");
+                }
+
+                else if (escolhaUsuario == papel && escolhaPC == tesoura) {
+                    alert("O computador ganhou.");
+                }
+
+                else if (escolhaUsuario == papel && escolhaPC == pedra) {
+                    alert("Você ganhou!");
+                }
+
+                escolhaUsuario = prompt("Escolha uma opção: " + "\n" +
+                    "1 - pedra" + "\n" +
+                    "2 - tesoura" + "\n" +
+                    "3 - papel" + "\n" +
+                    "0 - cancelar");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
