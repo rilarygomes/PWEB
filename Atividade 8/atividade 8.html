@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pesquisa</title>
+</head>
+
+<body>
+
+	<script>
+		var pessoa = 0;
+        var idadePessoaMaisVelha = 0;
+        var idadePessoaMaisNova = 100;
+        var quantidadePessimo = 0;
+        var quantidadeBom = 0;
+        var quantidadeOtimo = 0;
+        var quantidadeFem = 0;
+        var quantidadeMas = 0;
+        var somaIdades = 0;
+        var quantidadePessoas = 3;
+
+        while(pessoa < quantidadePessoas)
+        {
+            var idade = prompt("Digite sua idade: ");
+            var sexo = prompt("Digite 'F' para feminino ou 'M' para masculino: ");
+            var opiniao = prompt("Digite sua opinião sobre o filme:  \n\
+                                1 - Péssimo \n\
+                                2 - Regular \n\
+                                3 - Bom \n\
+                                4 - Ótimo");
+
+            idade = Number(idade);
+
+            if(idade > idadePessoaMaisVelha)
+                idadePessoaMaisVelha = idade;
+
+            if(idade < idadePessoaMaisNova)
+                idadePessoaMaisNova = idade;    
+
+            switch(opiniao)
+            {
+                case "1": 
+                    quantidadePessimo += 1;
+                    break;
+                    
+                case "3":
+                    quantidadeBom += 1;
+                    break;
+
+                case "4":
+                    quantidadeOtimo += 1;
+                    break;
+            }
+
+            if(sexo == "F" || sexo == "f")
+                quantidadeFem += 1;
+            else if (sexo == "M" || sexo == "m")
+                quantidadeMas += 1;
+
+            somaIdades += idade;
+
+            pessoa++;
+        }
+
+        var mediaIdade = somaIdades/quantidadePessoas;
+        var porcentBom = ((quantidadePessoas/100) * quantidadeBom).toFixed(2);
+        var porcentOtimo = ((quantidadePessoas/100) * quantidadeOtimo).toFixed(2);
+
+        alert("A média da idade das pessoas que responderam ao questionário é: " + mediaIdade);
+        alert("A idade da pessoa mais velha é: " + idadePessoaMaisVelha);
+        alert("A idade da pessoa mais nova é: " + idadePessoaMaisNova);
+        alert("A quantidade de pessoas que responderam 'Péssimo' foi: " + quantidadePessimo);
+        alert("A porcentagem de 'Bom' foi: " + porcentBom);
+        alert("A porcentagem de 'Ótimo' foi: " + porcentOtimo);
+        alert("O número de mulheres que responderam ao questionário foi: " + quantidadeFem);
+        alert("O número de homens que responderam ao questionário foi: " + quantidadeMas);
+
+	</script>
+
+</body>
+
+</html>
+
+</script>
+
+</body>
+
+</html>
